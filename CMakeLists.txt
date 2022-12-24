@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.2)
-project(api-server)
+project(rest-cpp-data-science)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -pg -g3" )
 
 set(VERSION_MAJOR 1)
@@ -32,5 +32,5 @@ ${CMAKE_CURRENT_SOURCE_DIR}/impl/*.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 )
 
-add_executable(api-server ${SRCS}) 
-target_link_libraries(api-server pistache pthread)
+add_executable(rest-cpp-data-science ${SRCS}) 
+target_link_libraries(rest-cpp-data-science pistache pthread)
