@@ -56,13 +56,24 @@ make docker-run
  # Contribute
 
  If you would like to contribute, here are some ways you could do so:
+ 
+ * Report bugs: 
 
-    Report bugs: If you find any issues with the API, you can report them by creating an issue in the repository's issue tracker. Be sure to include a detailed description of the issue and steps to reproduce it.
+If you find any issues with the API, you can report them by creating an issue in the repository's issue tracker. Be sure to include a detailed description of the issue and steps to reproduce it.
 
-    Suggest enhancements: If you have an idea for a new feature or improvement for the API, you can suggest it by creating an issue in the repository's issue tracker. Be sure to include a detailed description of your idea and how it would benefit users of the API.
+* Suggest enhancements: 
 
-    Submit pull requests: If you have code changes that you would like to contribute to the API, you can submit a pull request. Be sure to follow the repository's contribution guidelines and include a detailed description of your changes.
+If you have an idea for a new feature or improvement for the API, you can suggest it by creating an issue in the repository's issue tracker. Be sure to include a detailed description of your idea and how it would benefit users of the API.
 
-    Improve documentation: If you find any errors or areas for improvement in the API's documentation, you can submit a pull request to fix them.
 
-    Spread the word: If you find the data science REST API useful, consider sharing it with others who may also find it useful. You can do this by sharing the repository on social media or mentioning it in relevant forums or online communities.
+* Submit pull requests: 
+
+If you have code changes that you would like to contribute to the API, you can submit a pull request. Be sure to follow the repository's contribution guidelines and include a detailed description of your changes.
+
+* Improve documentation: 
+
+If you find any errors or areas for improvement in the API's documentation, you can submit a pull request to fix them.
+
+* Spread the word: 
+
+If you find the data science REST API useful, consider sharing it with others who may also find it useful. You can do this by sharing the repository on social media or mentioning it in relevant forums or online communities.
