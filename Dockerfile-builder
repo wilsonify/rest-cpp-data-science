@@ -1,0 +1,8 @@
+FROM rest-cpp-data-science-base:latest
+RUN apt-get install -y \
+git \
+cmake \
+g++ \
+ninja-build \
+meson \
+rapidjson-dev
