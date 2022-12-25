@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: maximize_stochastic
+  operationid: maximize_stochastic_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "Description of the endpoint"
   requestBody:

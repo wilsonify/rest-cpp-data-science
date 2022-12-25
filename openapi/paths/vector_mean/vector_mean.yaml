@@ -1,6 +1,6 @@
 post:
   tags: [linear_algebra]
-  operationId: vector_mean
+  operationid: vector_mean_control
   x-openapi-router-controller: openapi_server.controllers.linear_algebra_controller
   description: "compute the vector whose i-th element is the mean of the i-th elements of the input vectors"
   requestBody:

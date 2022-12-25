@@ -1,6 +1,6 @@
 post:
   tags: [stats]
-  operationId: correlation_matrix
+  operationid: correlation_matrix_control
   x-openapi-router-controller: openapi_server.controllers.stats_controller
   description: "Description of the endpoint"
   requestBody:

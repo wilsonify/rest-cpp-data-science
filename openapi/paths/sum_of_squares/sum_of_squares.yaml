@@ -1,6 +1,6 @@
 post:
   tags: [linear_algebra]
-  operationId: sum_of_squares
+  operationid: sum_of_squares_control
   x-openapi-router-controller: openapi_server.controllers.linear_algebra_controller
   description: "Description of the endpoint"
   requestBody:

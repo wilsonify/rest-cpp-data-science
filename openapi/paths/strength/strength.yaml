@@ -1,6 +1,6 @@
 post:
   tags: [strength]
-  operationId: strengthen
+  operationid: strengthen_control
   x-openapi-router-controller: openapi_server.controllers.strength_controller
   description: "Description of the endpoint"
   requestBody:

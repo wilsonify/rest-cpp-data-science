@@ -1,6 +1,6 @@
 post:
   tags: [machine_learning]
-  operationId: f1_score
+  operationid: f1_score_control
   x-openapi-router-controller: openapi_server.controllers.machine_learning_controller
   description: "Description of the endpoint"
   requestBody:

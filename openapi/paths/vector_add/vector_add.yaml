@@ -1,6 +1,6 @@
 post:
   tags: [linear_algebra]
-  operationId: vector_add
+  operationid: vector_add_control
   x-openapi-router-controller: openapi_server.controllers.linear_algebra_controller
   description: "Description of the endpoint"
   requestBody:

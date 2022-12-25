@@ -1,6 +1,6 @@
 post:
   tags: [stats]
-  operationId: variance
+  operationid: variance_control
   x-openapi-router-controller: openapi_server.controllers.stats_controller
   description: "Description of the endpoint"
   requestBody:

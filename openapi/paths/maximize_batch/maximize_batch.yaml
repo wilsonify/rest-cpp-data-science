@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: maximize_batch
+  operationid: maximize_batch_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "use gradient descent to find theta that minimizes target function"
   requestBody:

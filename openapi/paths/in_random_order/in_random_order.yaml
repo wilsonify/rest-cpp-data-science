@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: in_random_order
+  operationid: in_random_order_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "Description of the endpoint"
   requestBody:

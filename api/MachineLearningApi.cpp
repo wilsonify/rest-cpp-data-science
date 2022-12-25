@@ -79,7 +79,7 @@ void MachineLearningApi::accuracy_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->accuracy(accuracyInput, response);
+        this->accuracy_control(accuracyInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -112,7 +112,7 @@ void MachineLearningApi::f1_score_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->f1_score(f1ScoreInput, response);
+        this->f1_score_control(f1ScoreInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -145,7 +145,7 @@ void MachineLearningApi::precision_handler(const Pistache::Rest::Request &reques
     }
 
     try {
-        this->precision(precisionInput, response);
+        this->precision_control(precisionInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -178,7 +178,7 @@ void MachineLearningApi::split_data_handler(const Pistache::Rest::Request &reque
     }
 
     try {
-        this->split_data(splitDataInput, response);
+        this->split_data_control(splitDataInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -211,7 +211,7 @@ void MachineLearningApi::train_test_split_handler(const Pistache::Rest::Request 
     }
 
     try {
-        this->train_test_split(trainTestSplitInput, response);
+        this->train_test_split_control(trainTestSplitInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;

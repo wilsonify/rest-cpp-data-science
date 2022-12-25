@@ -78,7 +78,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="accuracyInput"> (optional)</param>
-    virtual void accuracy(const org::openapitools::server::model::Accuracy_input &accuracyInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void accuracy_control(const org::openapitools::server::model::Accuracy_input &accuracyInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -86,7 +86,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="f1ScoreInput"> (optional)</param>
-    virtual void f1_score(const org::openapitools::server::model::F1_score_input &f1ScoreInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void f1_score_control(const org::openapitools::server::model::F1_score_input &f1ScoreInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -94,7 +94,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="precisionInput"> (optional)</param>
-    virtual void precision(const org::openapitools::server::model::Precision_input &precisionInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void precision_control(const org::openapitools::server::model::Precision_input &precisionInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -102,7 +102,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="splitDataInput"> (optional)</param>
-    virtual void split_data(const org::openapitools::server::model::Split_data_input &splitDataInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void split_data_control(const org::openapitools::server::model::Split_data_input &splitDataInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -110,7 +110,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="trainTestSplitInput"> (optional)</param>
-    virtual void train_test_split(const org::openapitools::server::model::Train_test_split_input &trainTestSplitInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void train_test_split_control(const org::openapitools::server::model::Train_test_split_input &trainTestSplitInput, Pistache::Http::ResponseWriter &response) = 0;
 
 };
 

@@ -1,6 +1,6 @@
 post:
   tags: [echo]
-  operationId: echo
+  operationid: echo_control
   x-openapi-router-controller: openapi_server.controllers.echo_controller
   description: "Description of the endpoint"
   requestBody:

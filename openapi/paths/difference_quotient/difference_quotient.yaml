@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: difference_quotient
+  operationid: difference_quotient_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "Description of the endpoint"
   requestBody:

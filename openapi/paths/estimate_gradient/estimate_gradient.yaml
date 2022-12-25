@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: estimate_gradient
+  operationid: estimate_gradient_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "Description of the endpoint"
   requestBody:

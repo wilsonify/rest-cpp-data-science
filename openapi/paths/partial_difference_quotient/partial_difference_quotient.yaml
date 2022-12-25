@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: partial_difference_quotient
+  operationid: partial_difference_quotient_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "add h to just the i-th element of v"
   requestBody:

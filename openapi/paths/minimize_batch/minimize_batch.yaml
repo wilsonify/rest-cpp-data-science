@@ -1,6 +1,6 @@
 post:
   tags: [gradient_descent]
-  operationId: minimize_batch
+  operationid: minimize_batch_control
   x-openapi-router-controller: openapi_server.controllers.gradient_descent_controller
   description: "Description of the endpoint"
   requestBody:

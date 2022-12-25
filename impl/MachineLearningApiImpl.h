@@ -47,11 +47,11 @@ public:
     explicit MachineLearningApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr);
     ~MachineLearningApiImpl() override = default;
 
-    void accuracy(const Accuracy_input &accuracyInput, Pistache::Http::ResponseWriter &response);
-    void f1_score(const F1_score_input &f1ScoreInput, Pistache::Http::ResponseWriter &response);
-    void precision(const Precision_input &precisionInput, Pistache::Http::ResponseWriter &response);
-    void split_data(const Split_data_input &splitDataInput, Pistache::Http::ResponseWriter &response);
-    void train_test_split(const Train_test_split_input &trainTestSplitInput, Pistache::Http::ResponseWriter &response);
+    void accuracy_control(const Accuracy_input &accuracyInput, Pistache::Http::ResponseWriter &response);
+    void f1_score_control(const F1_score_input &f1ScoreInput, Pistache::Http::ResponseWriter &response);
+    void precision_control(const Precision_input &precisionInput, Pistache::Http::ResponseWriter &response);
+    void split_data_control(const Split_data_input &splitDataInput, Pistache::Http::ResponseWriter &response);
+    void train_test_split_control(const Train_test_split_input &trainTestSplitInput, Pistache::Http::ResponseWriter &response);
 
 };
 
