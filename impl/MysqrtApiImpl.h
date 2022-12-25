@@ -35,14 +35,12 @@
 namespace org::openapitools::server::api
 {
 
-using namespace org::openapitools::server::model;
-
 class MysqrtApiImpl : public org::openapitools::server::api::MysqrtApi {
 public:
     explicit MysqrtApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr);
     ~MysqrtApiImpl() override = default;
 
-    void sqrt(const Sqrt_input &sqrtInput, Pistache::Http::ResponseWriter &response);
+    void sqrt(const org::openapitools::server::model::Sqrt_input &sqrtInput, Pistache::Http::ResponseWriter &response) final;
 
 };
 

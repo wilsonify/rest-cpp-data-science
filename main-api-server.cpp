@@ -72,7 +72,7 @@ int main() {
 #endif
     Pistache::Address addr(Pistache::Ipv4::any(), Pistache::Port(8080));
 
-    httpEndpoint = new Pistache::Http::Endpoint((addr));
+    httpEndpoint = new Pistache::Http::Endpoint(addr);
     auto router = std::make_shared<Pistache::Rest::Router>();
 
     auto opts = Pistache::Http::Endpoint::options()

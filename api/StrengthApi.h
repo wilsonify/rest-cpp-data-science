@@ -69,7 +69,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="strengthInput"> (optional)</param>
-    virtual void strength(const org::openapitools::server::model::Strength_input &strengthInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void strengthen(const org::openapitools::server::model::Strength_input &strengthInput, Pistache::Http::ResponseWriter &response) = 0;
 
 };
 

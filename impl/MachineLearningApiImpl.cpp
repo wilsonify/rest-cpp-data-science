@@ -12,10 +12,7 @@
 
 #include "MachineLearningApiImpl.h"
 
-namespace org {
-namespace openapitools {
-namespace server {
-namespace api {
+namespace org::openapitools::server::api {
 
 using namespace org::openapitools::server::model;
 
@@ -59,8 +56,5 @@ void MachineLearningApiImpl::train_test_split(const Train_test_split_input &trai
     response.send(Pistache::Http::Code::Ok, "Do some magic\n");
 }
 
-}
-}
-}
 }
 

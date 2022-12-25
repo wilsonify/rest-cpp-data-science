@@ -88,7 +88,7 @@ void StatsApi::bucketize_handler(const Pistache::Rest::Request &request, Pistach
     }
 
     try {
-        this->bucketize(bucketizeInput, response);
+        this->bucketizer(bucketizeInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;

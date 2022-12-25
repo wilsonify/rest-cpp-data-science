@@ -42,7 +42,7 @@ public:
     explicit StrengthApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr);
     ~StrengthApiImpl() override = default;
 
-    void strength(const Strength_input &strengthInput, Pistache::Http::ResponseWriter &response);
+    void strengthen(const Strength_input &strengthInput, Pistache::Http::ResponseWriter &response);
 
 };
 

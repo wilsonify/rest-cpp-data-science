@@ -60,7 +60,7 @@ public:
     explicit StatsApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr);
     ~StatsApiImpl() override = default;
 
-    void bucketize(const Bucketize_input &bucketizeInput, Pistache::Http::ResponseWriter &response);
+    void bucketizer(const Bucketize_input &bucketizeInput, Pistache::Http::ResponseWriter &response);
     void correlation(const Correlation_input &correlationInput, Pistache::Http::ResponseWriter &response);
     void correlation_matrix(const Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response);
     void covariance(const Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response);

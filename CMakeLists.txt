@@ -49,4 +49,4 @@ ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 )
 
 add_executable(rest-cpp-data-science ${SRCS}) 
-target_link_libraries(rest-cpp-data-science pistache pthread)
+target_link_libraries(rest-cpp-data-science pistache pthread dspack)

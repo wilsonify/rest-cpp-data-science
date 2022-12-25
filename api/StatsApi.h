@@ -100,7 +100,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="bucketizeInput"> (optional)</param>
-    virtual void bucketize(const org::openapitools::server::model::Bucketize_input &bucketizeInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void bucketizer(const org::openapitools::server::model::Bucketize_input &bucketizeInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
