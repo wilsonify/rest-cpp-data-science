@@ -25,7 +25,19 @@ MysqrtApiImpl::MysqrtApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr)
 }
 
 void MysqrtApiImpl::sqrt(const Sqrt_input &sqrtInput, Pistache::Http::ResponseWriter &response) {
-    response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+    double x;
+    Sqrt_output result;    
+    nlohmann::json json_to_dump;    
+    std::string string_to_send;
+        
+    x=sqrtInput.getX();
+    result.setX(x);
+    result.setResult(std::sqrt(x));  
+    
+    nlohmann::to_json(json_to_dump, result);
+    string_to_send = json_to_dump.dump();
+    response.send(Pistache::Http::Code::Ok, string_to_send);
+
 }
 
 }

@@ -25,7 +25,19 @@ StrengthApiImpl::StrengthApiImpl(const std::shared_ptr<Pistache::Rest::Router>& 
 }
 
 void StrengthApiImpl::strength(const Strength_input &strengthInput, Pistache::Http::ResponseWriter &response) {
-    response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+    double expected;
+    double actual;        
+    double result;    
+    double eps=0.01;
+    nlohmann::json json_to_dump;
+    std::string string_to_send;
+    actual=strengthInput.getActual();
+    expected=strengthInput.getExpected();
+    result = actual / (expected+eps);
+    nlohmann::to_json(json_to_dump, result);
+    string_to_send = json_to_dump.dump();
+    response.send(Pistache::Http::Code::Ok, string_to_send);
+
 }
 
 }

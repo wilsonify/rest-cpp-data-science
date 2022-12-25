@@ -25,7 +25,26 @@ MachineLearningApiImpl::MachineLearningApiImpl(const std::shared_ptr<Pistache::R
 }
 
 void MachineLearningApiImpl::accuracy(const Accuracy_input &accuracyInput, Pistache::Http::ResponseWriter &response) {
-    response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+    double tp;
+    double fp;
+    double fn;
+    double tn;    
+    double result;
+    double eps = 0.001;
+    nlohmann::json json_to_dump;    
+    std::string string_to_send;
+
+    tp=accuracyInput.getTp();
+    fp=accuracyInput.getFp();
+    fn=accuracyInput.getFn();
+    tn=accuracyInput.getTn();
+
+    result = (tp + tn) / (tp + fp + fn + tn + eps);
+
+    nlohmann::to_json(json_to_dump, result);
+    string_to_send = json_to_dump.dump();
+    response.send(Pistache::Http::Code::Ok, string_to_send);
+
 }
 void MachineLearningApiImpl::f1_score(const F1_score_input &f1ScoreInput, Pistache::Http::ResponseWriter &response) {
     response.send(Pistache::Http::Code::Ok, "Do some magic\n");
