@@ -286,7 +286,7 @@ void StatsApi::interquartile_range_handler(const Pistache::Rest::Request &reques
     }
 
     try {
-        this->interquartile_range(interquartileRangeInput, response);
+        this->interquartile_range_control(interquartileRangeInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -319,7 +319,7 @@ void StatsApi::mean_handler(const Pistache::Rest::Request &request, Pistache::Ht
     }
 
     try {
-        this->mean(meanInput, response);
+        this->mean_control(meanInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -352,7 +352,7 @@ void StatsApi::median_handler(const Pistache::Rest::Request &request, Pistache::
     }
 
     try {
-        this->median(medianInput, response);
+        this->median_control(medianInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -385,7 +385,7 @@ void StatsApi::mode_handler(const Pistache::Rest::Request &request, Pistache::Ht
     }
 
     try {
-        this->mode(modeInput, response);
+        this->mode_control(modeInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -418,7 +418,7 @@ void StatsApi::quantile_handler(const Pistache::Rest::Request &request, Pistache
     }
 
     try {
-        this->quantile(quantileInput, response);
+        this->quantile_control(quantileInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -451,7 +451,7 @@ void StatsApi::recall_handler(const Pistache::Rest::Request &request, Pistache::
     }
 
     try {
-        this->recall(recallInput, response);
+        this->recall_control(recallInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -484,7 +484,7 @@ void StatsApi::standard_deviation_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->standard_deviation(standardDeviationInput, response);
+        this->standard_deviation_control(standardDeviationInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -517,7 +517,7 @@ void StatsApi::variance_handler(const Pistache::Rest::Request &request, Pistache
     }
 
     try {
-        this->variance(varianceInput, response);
+        this->variance_control(varianceInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;

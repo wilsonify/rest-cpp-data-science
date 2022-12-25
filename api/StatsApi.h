@@ -148,7 +148,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="interquartileRangeInput"> (optional)</param>
-    virtual void interquartile_range(const org::openapitools::server::model::Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void interquartile_range_control(const org::openapitools::server::model::Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -156,7 +156,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="meanInput"> (optional)</param>
-    virtual void mean(const org::openapitools::server::model::Mean_input &meanInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void mean_control(const org::openapitools::server::model::Mean_input &meanInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -164,7 +164,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="medianInput"> (optional)</param>
-    virtual void median(const org::openapitools::server::model::Median_input &medianInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void median_control(const org::openapitools::server::model::Median_input &medianInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -172,7 +172,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="modeInput"> (optional)</param>
-    virtual void mode(const org::openapitools::server::model::Mode_input &modeInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void mode_control(const org::openapitools::server::model::Mode_input &modeInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -180,7 +180,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="quantileInput"> (optional)</param>
-    virtual void quantile(const org::openapitools::server::model::Quantile_input &quantileInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void quantile_control(const org::openapitools::server::model::Quantile_input &quantileInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -188,7 +188,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="recallInput"> (optional)</param>
-    virtual void recall(const org::openapitools::server::model::Recall_input &recallInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void recall_control(const org::openapitools::server::model::Recall_input &recallInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -196,7 +196,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="standardDeviationInput"> (optional)</param>
-    virtual void standard_deviation(const org::openapitools::server::model::Standard_deviation_input &standardDeviationInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void standard_deviation_control(const org::openapitools::server::model::Standard_deviation_input &standardDeviationInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -204,7 +204,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="varianceInput"> (optional)</param>
-    virtual void variance(const org::openapitools::server::model::Variance_input &varianceInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void variance_control(const org::openapitools::server::model::Variance_input &varianceInput, Pistache::Http::ResponseWriter &response) = 0;
 
 };
 

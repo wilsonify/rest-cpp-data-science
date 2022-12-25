@@ -66,14 +66,14 @@ public:
     void covariance_control(const Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response);
     void data_range_control(const Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response);
     void de_mean_control(const De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response);
-    void interquartile_range(const Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response);
-    void mean(const Mean_input &meanInput, Pistache::Http::ResponseWriter &response);
-    void median(const Median_input &medianInput, Pistache::Http::ResponseWriter &response);
-    void mode(const Mode_input &modeInput, Pistache::Http::ResponseWriter &response);
-    void quantile(const Quantile_input &quantileInput, Pistache::Http::ResponseWriter &response);
-    void recall(const Recall_input &recallInput, Pistache::Http::ResponseWriter &response);
-    void standard_deviation(const Standard_deviation_input &standardDeviationInput, Pistache::Http::ResponseWriter &response);
-    void variance(const Variance_input &varianceInput, Pistache::Http::ResponseWriter &response);
+    void interquartile_range_control(const Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response);
+    void mean_control(const Mean_input &meanInput, Pistache::Http::ResponseWriter &response);
+    void median_control(const Median_input &medianInput, Pistache::Http::ResponseWriter &response);
+    void mode_control(const Mode_input &modeInput, Pistache::Http::ResponseWriter &response);
+    void quantile_control(const Quantile_input &quantileInput, Pistache::Http::ResponseWriter &response);
+    void recall_control(const Recall_input &recallInput, Pistache::Http::ResponseWriter &response);
+    void standard_deviation_control(const Standard_deviation_input &standardDeviationInput, Pistache::Http::ResponseWriter &response);
+    void variance_control(const Variance_input &varianceInput, Pistache::Http::ResponseWriter &response);
 
 };
 

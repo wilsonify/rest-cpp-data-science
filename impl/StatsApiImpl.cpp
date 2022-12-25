@@ -126,47 +126,129 @@ namespace org::openapitools::server::api
         std::string string_to_send;
 
         std::vector<double> x = deMeanInput.getX();
-        
+
         std::vector<double> result = de_mean(x);
-        
+
         result_output.setResult(result);
-        
+
         nlohmann::to_json(json_to_dump, result_output);
         string_to_send = json_to_dump.dump();
-        
+
         response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::interquartile_range(const Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::interquartile_range_control(const Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = interquartileRangeInput.getX();
+        double result = interquartile_range(x);
+
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::mean(const Mean_input &meanInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::mean_control(const Mean_input &meanInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = meanInput.getX();
+
+        double result = mean(x);
+
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::median(const Median_input &medianInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::median_control(const Median_input &medianInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = medianInput.getX();
+
+        double result = median(x);
+
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::mode(const Mode_input &modeInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::mode_control(const Mode_input &modeInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = modeInput.getX();
+
+        std::vector<double> result = de_mean(x);
+
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::quantile(const Quantile_input &quantileInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::quantile_control(const Quantile_input &quantileInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = quantileInput.getX();
+
+        double result = quantile(0.5, x);
+
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::recall(const Recall_input &recallInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::recall_control(const Recall_input &recallInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+        double tp = recallInput.getTp();
+        double fp = recallInput.getFp();
+        double fn = recallInput.getFn();
+        double tn = recallInput.getTn();
+
+        double result = recall(tp, fp, fn, tn);
+        
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::standard_deviation(const Standard_deviation_input &standardDeviationInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::standard_deviation_control(const Standard_deviation_input &standardDeviationInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = standardDeviationInput.getX();
+
+        double result = standard_deviation(x);
+        
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::variance(const Variance_input &varianceInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::variance_control(const Variance_input &varianceInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+        std::vector<double> x = varianceInput.getX();
+        double result = variance(x);
+        nlohmann::to_json(json_to_dump, result);
+        string_to_send = json_to_dump.dump();
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
 
 }
