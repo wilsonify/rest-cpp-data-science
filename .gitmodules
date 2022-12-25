@@ -5,11 +5,11 @@
 	path = external/pistache
 	url = https://github.com/pistacheio/pistache.git
 [submodule "external/googletest"]
-	path = src/rest-scratch-pistache/generated/external/googletest
+	path = external/googletest
 	url = https://github.com/google/googletest
 [submodule "external/rapidjson"]
 	path = external/rapidjson
 	url = https://github.com/Tencent/rapidjson.git
-[submodule "tests/external/googletest"]
-	path = tests/test-data-scratch-cpp/external/googletest
-	url = https://github.com/google/googletest
+[submodule "external/base-cpp-data-science"]
+	path = external/base-cpp-data-science
+	url = https://github.com/wilsonify/base-cpp-data-science.git
