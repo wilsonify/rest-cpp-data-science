@@ -1,6 +1,6 @@
 ver_file = echo "1.0.0" > $(1) && date +%Y-%m-%d >> $(1)
 
-all: clean dist/api-server
+all: clean dist/rest-cpp-data-science
 
 clean:
 	rm -rf build
@@ -27,11 +27,11 @@ external/googletest/CMakeLists.txt:
 build/makefile: build/VERSION.txt external/googletest/CMakeLists.txt
 	cd build && cmake .. -G Ninja
 
-build/api-server: build/makefile
+build/rest-cpp-data-science: build/makefile
 	cd build && ninja
 
-dist/api-server: dist/VERSION.txt build/api-server
-	cp build/api-server dist
+dist/rest-cpp-data-science: dist/VERSION.txt build/rest-cpp-data-science
+	cp build/rest-cpp-data-science dist
 
 build/rest-cpp-data-science-base.txt: build/VERSION.txt
 	docker build -f Dockerfile-base -t rest-cpp-data-science-base:latest . && $(call ver_file, $@)
