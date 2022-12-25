@@ -85,16 +85,22 @@ int main() {
     
     EchoApiImpl EchoApiserver(router);
     EchoApiserver.init();
+    
     GradientDescentApiImpl GradientDescentApiserver(router);
     GradientDescentApiserver.init();
+    
     LinearAlgebraApiImpl LinearAlgebraApiserver(router);
     LinearAlgebraApiserver.init();
+    
     MachineLearningApiImpl MachineLearningApiserver(router);
     MachineLearningApiserver.init();
+    
     MysqrtApiImpl MysqrtApiserver(router);
     MysqrtApiserver.init();
+    
     StatsApiImpl StatsApiserver(router);
     StatsApiserver.init();
+    
     StrengthApiImpl StrengthApiserver(router);
     StrengthApiserver.init();
 
