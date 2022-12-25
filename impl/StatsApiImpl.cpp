@@ -65,21 +65,76 @@ namespace org::openapitools::server::api
 
         response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::correlation_matrix(const Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::correlation_matrix_control(const Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        Correlation_matrix_output result_output;
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = correlationMatrixInput.getX();
+        std::vector<double> y = correlationMatrixInput.getY();
+
+        double result = correlation(x, y);
+
+        result_output.setResult(result);
+
+        nlohmann::to_json(json_to_dump, result_output);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::covariance(const Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::covariance_control(const Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        Covariance_output result_output;
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = covarianceInput.getX();
+        std::vector<double> y = covarianceInput.getY();
+
+        double result = covariance(x, y);
+
+        result_output.setResult(result);
+
+        nlohmann::to_json(json_to_dump, result_output);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::data_range(const Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::data_range_control(const Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        Data_range_output result_output;
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = dataRangeInput.getX();
+
+        double result = data_range(x);
+
+        result_output.setResult(result);
+
+        nlohmann::to_json(json_to_dump, result_output);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::de_mean(const De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response)
+
+    void StatsApiImpl::de_mean_control(const De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+        De_mean_output result_output;
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<double> x = deMeanInput.getX();
+        
+        std::vector<double> result = de_mean(x);
+        
+        result_output.setResult(result);
+        
+        nlohmann::to_json(json_to_dump, result_output);
+        string_to_send = json_to_dump.dump();
+        
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
     void StatsApiImpl::interquartile_range(const Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response)
     {

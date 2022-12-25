@@ -154,7 +154,7 @@ void StatsApi::correlation_matrix_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->correlation_matrix(correlationMatrixInput, response);
+        this->correlation_matrix_control(correlationMatrixInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -187,7 +187,7 @@ void StatsApi::covariance_handler(const Pistache::Rest::Request &request, Pistac
     }
 
     try {
-        this->covariance(covarianceInput, response);
+        this->covariance_control(covarianceInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -220,7 +220,7 @@ void StatsApi::data_range_handler(const Pistache::Rest::Request &request, Pistac
     }
 
     try {
-        this->data_range(dataRangeInput, response);
+        this->data_range_control(dataRangeInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -253,7 +253,7 @@ void StatsApi::de_mean_handler(const Pistache::Rest::Request &request, Pistache:
     }
 
     try {
-        this->de_mean(deMeanInput, response);
+        this->de_mean_control(deMeanInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;

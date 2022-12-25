@@ -21,9 +21,6 @@ namespace org::openapitools::server::model
 
 De_mean_output::De_mean_output()
 {
-    m_x = 0.0;
-    m_xIsSet = false;
-    m_Result = 0.0;
     m_ResultIsSet = false;
     
 }
@@ -47,7 +44,28 @@ bool De_mean_output::validate(std::stringstream& msg, const std::string& pathPre
     bool success = true;
     const std::string _pathPrefix = pathPrefix.empty() ? "De_mean_output" : pathPrefix;
 
-            
+         
+    if (resultIsSet())
+    {
+        const std::vector<double>& value = m_Result;
+        const std::string currentValuePath = _pathPrefix + ".result";
+                
+        
+        { // Recursive validation of array elements
+            const std::string oldValuePath = currentValuePath;
+            int i = 0;
+            for (const double& value : value)
+            { 
+                const std::string currentValuePath = oldValuePath + "[" + std::to_string(i) + "]";
+                        
+        
+ 
+                i++;
+            }
+        }
+
+    }
+    
     return success;
 }
 
@@ -55,9 +73,6 @@ bool De_mean_output::operator==(const De_mean_output& rhs) const
 {
     return
     
-    
-    
-    ((!XIsSet() && !rhs.XIsSet()) || (XIsSet() && rhs.XIsSet() && getX() == rhs.getX())) &&
     
     
     ((!resultIsSet() && !rhs.resultIsSet()) || (resultIsSet() && rhs.resultIsSet() && getResult() == rhs.getResult()))
@@ -73,20 +88,13 @@ bool De_mean_output::operator!=(const De_mean_output& rhs) const
 void to_json(nlohmann::json& j, const De_mean_output& o)
 {
     j = nlohmann::json();
-    if(o.XIsSet())
-        j["x"] = o.m_x;
-    if(o.resultIsSet())
+    if(o.resultIsSet() || !o.m_Result.empty())
         j["result"] = o.m_Result;
     
 }
 
 void from_json(const nlohmann::json& j, De_mean_output& o)
 {
-    if(j.find("x") != j.end())
-    {
-        j.at("x").get_to(o.m_x);
-        o.m_xIsSet = true;
-    } 
     if(j.find("result") != j.end())
     {
         j.at("result").get_to(o.m_Result);
@@ -95,28 +103,11 @@ void from_json(const nlohmann::json& j, De_mean_output& o)
     
 }
 
-double De_mean_output::getX() const
-{
-    return m_x;
-}
-void De_mean_output::setX(double const value)
-{
-    m_x = value;
-    m_xIsSet = true;
-}
-bool De_mean_output::XIsSet() const
-{
-    return m_xIsSet;
-}
-void De_mean_output::unsetx()
-{
-    m_xIsSet = false;
-}
-double De_mean_output::getResult() const
+std::vector<double> De_mean_output::getResult() const
 {
     return m_Result;
 }
-void De_mean_output::setResult(double const value)
+void De_mean_output::setResult(std::vector<double> const value)
 {
     m_Result = value;
     m_ResultIsSet = true;

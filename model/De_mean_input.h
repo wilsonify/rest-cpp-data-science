@@ -19,6 +19,7 @@
 #define De_mean_input_H_
 
 
+#include <vector>
 #include <nlohmann/json.hpp>
 
 namespace org::openapitools::server::model
@@ -60,15 +61,15 @@ public:
     /// <summary>
     /// 
     /// </summary>
-    double getX() const;
-    void setX(double const value);
+    std::vector<double> getX() const;
+    void setX(std::vector<double> const value);
     bool XIsSet() const;
     void unsetx();
 
     friend void to_json(nlohmann::json& j, const De_mean_input& o);
     friend void from_json(const nlohmann::json& j, De_mean_input& o);
 protected:
-    double m_x;
+    std::vector<double> m_x;
     bool m_xIsSet;
     
 };

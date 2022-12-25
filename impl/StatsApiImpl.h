@@ -62,10 +62,10 @@ public:
 
     void bucketizer(const Bucketize_input &bucketizeInput, Pistache::Http::ResponseWriter &response);
     void correlation_control(const Correlation_input &correlationInput, Pistache::Http::ResponseWriter &response);
-    void correlation_matrix(const Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response);
-    void covariance(const Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response);
-    void data_range(const Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response);
-    void de_mean(const De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response);
+    void correlation_matrix_control(const Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response);
+    void covariance_control(const Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response);
+    void data_range_control(const Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response);
+    void de_mean_control(const De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response);
     void interquartile_range(const Interquartile_range_input &interquartileRangeInput, Pistache::Http::ResponseWriter &response);
     void mean(const Mean_input &meanInput, Pistache::Http::ResponseWriter &response);
     void median(const Median_input &medianInput, Pistache::Http::ResponseWriter &response);

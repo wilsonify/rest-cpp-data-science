@@ -21,7 +21,6 @@ namespace org::openapitools::server::model
 
 De_mean_input::De_mean_input()
 {
-    m_x = 0.0;
     m_xIsSet = false;
     
 }
@@ -45,7 +44,28 @@ bool De_mean_input::validate(std::stringstream& msg, const std::string& pathPref
     bool success = true;
     const std::string _pathPrefix = pathPrefix.empty() ? "De_mean_input" : pathPrefix;
 
+         
+    if (XIsSet())
+    {
+        const std::vector<double>& value = m_x;
+        const std::string currentValuePath = _pathPrefix + ".X";
+                
         
+        { // Recursive validation of array elements
+            const std::string oldValuePath = currentValuePath;
+            int i = 0;
+            for (const double& value : value)
+            { 
+                const std::string currentValuePath = oldValuePath + "[" + std::to_string(i) + "]";
+                        
+        
+ 
+                i++;
+            }
+        }
+
+    }
+    
     return success;
 }
 
@@ -68,7 +88,7 @@ bool De_mean_input::operator!=(const De_mean_input& rhs) const
 void to_json(nlohmann::json& j, const De_mean_input& o)
 {
     j = nlohmann::json();
-    if(o.XIsSet())
+    if(o.XIsSet() || !o.m_x.empty())
         j["x"] = o.m_x;
     
 }
@@ -83,11 +103,11 @@ void from_json(const nlohmann::json& j, De_mean_input& o)
     
 }
 
-double De_mean_input::getX() const
+std::vector<double> De_mean_input::getX() const
 {
     return m_x;
 }
-void De_mean_input::setX(double const value)
+void De_mean_input::setX(std::vector<double> const value)
 {
     m_x = value;
     m_xIsSet = true;

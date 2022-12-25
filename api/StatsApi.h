@@ -116,7 +116,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="correlationMatrixInput"> (optional)</param>
-    virtual void correlation_matrix(const org::openapitools::server::model::Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void correlation_matrix_control(const org::openapitools::server::model::Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -124,7 +124,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="covarianceInput"> (optional)</param>
-    virtual void covariance(const org::openapitools::server::model::Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void covariance_control(const org::openapitools::server::model::Covariance_input &covarianceInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -132,7 +132,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="dataRangeInput"> (optional)</param>
-    virtual void data_range(const org::openapitools::server::model::Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void data_range_control(const org::openapitools::server::model::Data_range_input &dataRangeInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -140,7 +140,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="deMeanInput"> (optional)</param>
-    virtual void de_mean(const org::openapitools::server::model::De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void de_mean_control(const org::openapitools::server::model::De_mean_input &deMeanInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
