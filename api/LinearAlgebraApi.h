@@ -99,7 +99,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="distanceInput"> (optional)</param>
-    virtual void distance(const org::openapitools::server::model::Distance_input &distanceInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void distance_control(const org::openapitools::server::model::Distance_input &distanceInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -107,7 +107,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="dotInput"> (optional)</param>
-    virtual void dot(const org::openapitools::server::model::Dot_input &dotInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void dot_control(const org::openapitools::server::model::Dot_input &dotInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -115,7 +115,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="getColumnInput"> (optional)</param>
-    virtual void get_column(const org::openapitools::server::model::Get_column_input &getColumnInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void get_column_control(const org::openapitools::server::model::Get_column_input &getColumnInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -123,7 +123,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="getRowInput"> (optional)</param>
-    virtual void get_row(const org::openapitools::server::model::Get_row_input &getRowInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void get_row_control(const org::openapitools::server::model::Get_row_input &getRowInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -131,7 +131,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="magnitudeInput"> (optional)</param>
-    virtual void magnitude(const org::openapitools::server::model::Magnitude_input &magnitudeInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void magnitude_control(const org::openapitools::server::model::Magnitude_input &magnitudeInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -139,7 +139,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="matrixAddInput"> (optional)</param>
-    virtual void matrix_add(const org::openapitools::server::model::Matrix_add_input &matrixAddInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void matrix_add_control(const org::openapitools::server::model::Matrix_add_input &matrixAddInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -147,7 +147,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="scalarMultiplyInput"> (optional)</param>
-    virtual void scalar_multiply(const org::openapitools::server::model::Scalar_multiply_input &scalarMultiplyInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void scalar_multiply_control(const org::openapitools::server::model::Scalar_multiply_input &scalarMultiplyInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -155,7 +155,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="shapeInput"> (optional)</param>
-    virtual void shape(const org::openapitools::server::model::Shape_input &shapeInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void shape_control(const org::openapitools::server::model::Shape_input &shapeInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -163,7 +163,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="squaredDistanceInput"> (optional)</param>
-    virtual void squared_distance(const org::openapitools::server::model::Squared_distance_input &squaredDistanceInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void squared_distance_control(const org::openapitools::server::model::Squared_distance_input &squaredDistanceInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -171,7 +171,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="sumOfSquaresInput"> (optional)</param>
-    virtual void sum_of_squares(const org::openapitools::server::model::Sum_of_squares_input &sumOfSquaresInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void sum_of_squares_control(const org::openapitools::server::model::Sum_of_squares_input &sumOfSquaresInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -179,7 +179,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="vectorAddInput"> (optional)</param>
-    virtual void vector_add(const org::openapitools::server::model::Vector_add_input &vectorAddInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void vector_add_control(const org::openapitools::server::model::Vector_add_input &vectorAddInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -187,7 +187,7 @@ private:
     /// compute the vector whose i-th element is the mean of the i-th elements of the input vectors
     /// </remarks>
     /// <param name="vectorMeanInput"> (optional)</param>
-    virtual void vector_mean(const org::openapitools::server::model::Vector_mean_input &vectorMeanInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void vector_mean_control(const org::openapitools::server::model::Vector_mean_input &vectorMeanInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -195,7 +195,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="vectorSubtractInput"> (optional)</param>
-    virtual void vector_subtract(const org::openapitools::server::model::Vector_subtract_input &vectorSubtractInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void vector_subtract_control(const org::openapitools::server::model::Vector_subtract_input &vectorSubtractInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>
@@ -203,7 +203,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="vectorSumInput"> (optional)</param>
-    virtual void vector_sum(const org::openapitools::server::model::Vector_sum_input &vectorSumInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void vector_sum_control(const org::openapitools::server::model::Vector_sum_input &vectorSumInput, Pistache::Http::ResponseWriter &response) = 0;
 
 };
 

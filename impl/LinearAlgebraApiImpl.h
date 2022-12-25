@@ -59,20 +59,20 @@ public:
     explicit LinearAlgebraApiImpl(const std::shared_ptr<Pistache::Rest::Router>& rtr);
     ~LinearAlgebraApiImpl() override = default;
 
-    void distance(const Distance_input &distanceInput, Pistache::Http::ResponseWriter &response);
-    void dot(const Dot_input &dotInput, Pistache::Http::ResponseWriter &response);
-    void get_column(const Get_column_input &getColumnInput, Pistache::Http::ResponseWriter &response);
-    void get_row(const Get_row_input &getRowInput, Pistache::Http::ResponseWriter &response);
-    void magnitude(const Magnitude_input &magnitudeInput, Pistache::Http::ResponseWriter &response);
-    void matrix_add(const Matrix_add_input &matrixAddInput, Pistache::Http::ResponseWriter &response);
-    void scalar_multiply(const Scalar_multiply_input &scalarMultiplyInput, Pistache::Http::ResponseWriter &response);
-    void shape(const Shape_input &shapeInput, Pistache::Http::ResponseWriter &response);
-    void squared_distance(const Squared_distance_input &squaredDistanceInput, Pistache::Http::ResponseWriter &response);
-    void sum_of_squares(const Sum_of_squares_input &sumOfSquaresInput, Pistache::Http::ResponseWriter &response);
-    void vector_add(const Vector_add_input &vectorAddInput, Pistache::Http::ResponseWriter &response);
-    void vector_mean(const Vector_mean_input &vectorMeanInput, Pistache::Http::ResponseWriter &response);
-    void vector_subtract(const Vector_subtract_input &vectorSubtractInput, Pistache::Http::ResponseWriter &response);
-    void vector_sum(const Vector_sum_input &vectorSumInput, Pistache::Http::ResponseWriter &response);
+    void distance_control(const Distance_input &distanceInput, Pistache::Http::ResponseWriter &response);
+    void dot_control(const Dot_input &dotInput, Pistache::Http::ResponseWriter &response);
+    void get_column_control(const Get_column_input &getColumnInput, Pistache::Http::ResponseWriter &response);
+    void get_row_control(const Get_row_input &getRowInput, Pistache::Http::ResponseWriter &response);
+    void magnitude_control(const Magnitude_input &magnitudeInput, Pistache::Http::ResponseWriter &response);
+    void matrix_add_control(const Matrix_add_input &matrixAddInput, Pistache::Http::ResponseWriter &response);
+    void scalar_multiply_control(const Scalar_multiply_input &scalarMultiplyInput, Pistache::Http::ResponseWriter &response);
+    void shape_control(const Shape_input &shapeInput, Pistache::Http::ResponseWriter &response);
+    void squared_distance_control(const Squared_distance_input &squaredDistanceInput, Pistache::Http::ResponseWriter &response);
+    void sum_of_squares_control(const Sum_of_squares_input &sumOfSquaresInput, Pistache::Http::ResponseWriter &response);
+    void vector_add_control(const Vector_add_input &vectorAddInput, Pistache::Http::ResponseWriter &response);
+    void vector_mean_control(const Vector_mean_input &vectorMeanInput, Pistache::Http::ResponseWriter &response);
+    void vector_subtract_control(const Vector_subtract_input &vectorSubtractInput, Pistache::Http::ResponseWriter &response);
+    void vector_sum_control(const Vector_sum_input &vectorSumInput, Pistache::Http::ResponseWriter &response);
 
 };
 

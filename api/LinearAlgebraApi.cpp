@@ -88,7 +88,7 @@ void LinearAlgebraApi::distance_handler(const Pistache::Rest::Request &request, 
     }
 
     try {
-        this->distance(distanceInput, response);
+        this->distance_control(distanceInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -121,7 +121,7 @@ void LinearAlgebraApi::dot_handler(const Pistache::Rest::Request &request, Pista
     }
 
     try {
-        this->dot(dotInput, response);
+        this->dot_control(dotInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -154,7 +154,7 @@ void LinearAlgebraApi::get_column_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->get_column(getColumnInput, response);
+        this->get_column_control(getColumnInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -187,7 +187,7 @@ void LinearAlgebraApi::get_row_handler(const Pistache::Rest::Request &request, P
     }
 
     try {
-        this->get_row(getRowInput, response);
+        this->get_row_control(getRowInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -220,7 +220,7 @@ void LinearAlgebraApi::magnitude_handler(const Pistache::Rest::Request &request,
     }
 
     try {
-        this->magnitude(magnitudeInput, response);
+        this->magnitude_control(magnitudeInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -253,7 +253,7 @@ void LinearAlgebraApi::matrix_add_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->matrix_add(matrixAddInput, response);
+        this->matrix_add_control(matrixAddInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -286,7 +286,7 @@ void LinearAlgebraApi::scalar_multiply_handler(const Pistache::Rest::Request &re
     }
 
     try {
-        this->scalar_multiply(scalarMultiplyInput, response);
+        this->scalar_multiply_control(scalarMultiplyInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -319,7 +319,7 @@ void LinearAlgebraApi::shape_handler(const Pistache::Rest::Request &request, Pis
     }
 
     try {
-        this->shape(shapeInput, response);
+        this->shape_control(shapeInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -352,7 +352,7 @@ void LinearAlgebraApi::squared_distance_handler(const Pistache::Rest::Request &r
     }
 
     try {
-        this->squared_distance(squaredDistanceInput, response);
+        this->squared_distance_control(squaredDistanceInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -385,7 +385,7 @@ void LinearAlgebraApi::sum_of_squares_handler(const Pistache::Rest::Request &req
     }
 
     try {
-        this->sum_of_squares(sumOfSquaresInput, response);
+        this->sum_of_squares_control(sumOfSquaresInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -418,7 +418,7 @@ void LinearAlgebraApi::vector_add_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->vector_add(vectorAddInput, response);
+        this->vector_add_control(vectorAddInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -451,7 +451,7 @@ void LinearAlgebraApi::vector_mean_handler(const Pistache::Rest::Request &reques
     }
 
     try {
-        this->vector_mean(vectorMeanInput, response);
+        this->vector_mean_control(vectorMeanInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -484,7 +484,7 @@ void LinearAlgebraApi::vector_subtract_handler(const Pistache::Rest::Request &re
     }
 
     try {
-        this->vector_subtract(vectorSubtractInput, response);
+        this->vector_subtract_control(vectorSubtractInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
@@ -517,7 +517,7 @@ void LinearAlgebraApi::vector_sum_handler(const Pistache::Rest::Request &request
     }
 
     try {
-        this->vector_sum(vectorSumInput, response);
+        this->vector_sum_control(vectorSumInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;
