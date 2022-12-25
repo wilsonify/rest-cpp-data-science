@@ -8,8 +8,8 @@ clean:
 
 generate:
 	docker run --rm \
-	-u $(id -u):$(id -g) \
-	-v "${PWD}:/local" \
+	-u $(shell id -u):$(shell id -g) \
+	-v "$(shell pwd):/local" \
 	openapitools/openapi-generator-cli:latest generate \
 	-i /local/openapi/openapi.yaml \
 	-g cpp-pistache-server \
