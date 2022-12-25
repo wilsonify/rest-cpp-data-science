@@ -121,7 +121,7 @@ void StatsApi::correlation_handler(const Pistache::Rest::Request &request, Pista
     }
 
     try {
-        this->correlation(correlationInput, response);
+        this->correlation_control(correlationInput, response);
     } catch (Pistache::Http::HttpError &e) {
         response.send(static_cast<Pistache::Http::Code>(e.code()), e.what());
         return;

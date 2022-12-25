@@ -25,16 +25,19 @@ namespace org::openapitools::server::api
 
     void StrengthApiImpl::strengthen(const Strength_input &strengthInput, Pistache::Http::ResponseWriter &response)
     {
-        double expected;
-        double actual;
-        double result;
-        double eps = 0.01;
+        Strength_output result_output;
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        actual = strengthInput.getActual();
-        expected = strengthInput.getExpected();
-        result = strength(actual, expected);
-        nlohmann::to_json(json_to_dump, result);
+
+        int32_t actual = strengthInput.getActual();
+        int32_t expected = strengthInput.getExpected();
+        double result = strength(double(actual), double(expected));
+        
+        result_output.setActual(actual);
+        result_output.setExpected(expected);
+        result_output.setStrength(result);
+
+        nlohmann::to_json(json_to_dump, result_output);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
     }

@@ -108,7 +108,7 @@ private:
     /// Description of the endpoint
     /// </remarks>
     /// <param name="correlationInput"> (optional)</param>
-    virtual void correlation(const org::openapitools::server::model::Correlation_input &correlationInput, Pistache::Http::ResponseWriter &response) = 0;
+    virtual void correlation_control(const org::openapitools::server::model::Correlation_input &correlationInput, Pistache::Http::ResponseWriter &response) = 0;
     /// <summary>
     /// 
     /// </summary>

@@ -4,4 +4,5 @@ properties:
     type: integer
   expected:
     type: integer
-example: { "actual": 60, "expected": 100}
+example: 
+  $ref: "strength-input-example.json"

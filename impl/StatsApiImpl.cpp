@@ -31,23 +31,39 @@ namespace org::openapitools::server::api
         Bucketize_output result_output;
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        
+
         point = bucketizeInput.getPoint();
         bucket_size = bucketizeInput.getBucketSize();
-        
+
         result = bucketize(point, bucket_size);
-        
+
         result_output.setResult(result);
         result_output.setX(point);
-        
+
         nlohmann::to_json(json_to_dump, result_output);
         string_to_send = json_to_dump.dump();
-        
+
         response.send(Pistache::Http::Code::Ok, string_to_send);
     }
-    void StatsApiImpl::correlation(const Correlation_input &correlationInput, Pistache::Http::ResponseWriter &response)
+    void StatsApiImpl::correlation_control(const Correlation_input &correlationInput, Pistache::Http::ResponseWriter &response)
     {
-        response.send(Pistache::Http::Code::Ok, "Do some magic\n");
+
+        Correlation_output result_output;
+        nlohmann::json json_to_dump;
+        std::string string_to_send;
+
+        std::vector<std::vector<double>> data = correlationInput.getData();
+        std::vector<double> x = get_column(data, 0);
+        std::vector<double> y = get_column(data, 1);
+
+        double result = correlation(x, y);
+
+        result_output.setResult(result);
+
+        nlohmann::to_json(json_to_dump, result_output);
+        string_to_send = json_to_dump.dump();
+
+        response.send(Pistache::Http::Code::Ok, string_to_send);
     }
     void StatsApiImpl::correlation_matrix(const Correlation_matrix_input &correlationMatrixInput, Pistache::Http::ResponseWriter &response)
     {
