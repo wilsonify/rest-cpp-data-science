@@ -1,7 +1,7 @@
 post:
-  tags: [math]
+  tags: [linear_algebra]
   operationId: distance
-  x-openapi-router-controller: openapi_server.controllers.math_controller
+  x-openapi-router-controller: openapi_server.controllers.linear_algebra_controller
   description: "Description of the endpoint"
   requestBody:
     content:

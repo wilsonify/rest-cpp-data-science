@@ -1,7 +1,7 @@
 post:
-  tags: [math]
+  tags: [machine_learning]
   operationId: precision
-  x-openapi-router-controller: openapi_server.controllers.math_controller
+  x-openapi-router-controller: openapi_server.controllers.machine_learning_controller
   description: "Description of the endpoint"
   requestBody:
     content:

@@ -1,7 +1,7 @@
 post:
-  tags: [math]
+  tags: [mysqrt]
   operationId: sqrt
-  x-openapi-router-controller: openapi_server.controllers.math_controller
+  x-openapi-router-controller: openapi_server.controllers.mysqrt_controller
   description: "Description of the endpoint"
   requestBody:
     content:

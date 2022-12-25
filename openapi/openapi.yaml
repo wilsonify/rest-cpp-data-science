@@ -16,7 +16,7 @@ paths:
     $ref: "paths/sqrt/sqrt.yaml"
   /strength:
     $ref: "paths/strength/strength.yaml"
-  /accuracy:
+  /acc`racy:
     $ref: "paths/accuracy/accuracy.yaml"
   /bucketize:
     $ref: "paths/bucketize/bucketize.yaml"
