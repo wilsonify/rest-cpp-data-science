@@ -20,7 +20,13 @@
 #include <unistd.h>
 #endif
 
-#include "MathApiImpl.h"
+#include "EchoApiImpl.h"
+#include "GradientDescentApiImpl.h"
+#include "LinearAlgebraApiImpl.h"
+#include "MachineLearningApiImpl.h"
+#include "MysqrtApiImpl.h"
+#include "StatsApiImpl.h"
+#include "StrengthApiImpl.h"
 
 #define PISTACHE_SERVER_THREADS     2
 #define PISTACHE_SERVER_MAX_REQUEST_SIZE 32768
@@ -77,8 +83,20 @@ int main() {
     httpEndpoint->init(opts);
 
     
-    MathApiImpl MathApiserver(router);
-    MathApiserver.init();
+    EchoApiImpl EchoApiserver(router);
+    EchoApiserver.init();
+    GradientDescentApiImpl GradientDescentApiserver(router);
+    GradientDescentApiserver.init();
+    LinearAlgebraApiImpl LinearAlgebraApiserver(router);
+    LinearAlgebraApiserver.init();
+    MachineLearningApiImpl MachineLearningApiserver(router);
+    MachineLearningApiserver.init();
+    MysqrtApiImpl MysqrtApiserver(router);
+    MysqrtApiserver.init();
+    StatsApiImpl StatsApiserver(router);
+    StatsApiserver.init();
+    StrengthApiImpl StrengthApiserver(router);
+    StrengthApiserver.init();
 
     httpEndpoint->setHandler(router->handler());
     httpEndpoint->serve();
