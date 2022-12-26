@@ -1,17 +1,22 @@
+
 #include <gtest/gtest.h>
 #include "gmock/gmock-matchers.h"
 #include "dspack.h"
+#include "nlohmann/json.hpp"
+#include <string>
+#include "run-my-sqrt.h"
 
 TEST(test_mysqrt, test_mysqrt01)
 {
-    Sqrt_input sqrt_input;
-    sqrt_input.setX(25.0);
-    Pistache::Http::ResponseWriter response_writer;
-    MysqrtApiImpl::sqrt(const Sqrt_input &sqrtInput, Pistache::Http::ResponseWriter &response)
-
-    double result;
-    result = mysqrt(25.0);
-    EXPECT_EQ(5.0, result);
+    nlohmann::json input_json;
+    nlohmann::json result_json;
+    std::string expected_str;
+    nlohmann::json expected_json;
+    expected_str = R"({"result": 5.0, "x": 25.0})";
+    expected_json = nlohmann::json::parse(expected_str);    
+    input_json["x"] = 25.0;
+    result_json = run_my_sqrt(input_json);
+    EXPECT_EQ(result_json, expected_json);
 }
 
 TEST(test_mysqrt, test_mysqrt02)

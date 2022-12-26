@@ -8,10 +8,10 @@ set(VERSION_PATCH 1)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
-#build header only library
+# build header only library
 include_directories(external/json/include)
 
-#build rapidjson
+# build rapidjson
 set(RAPIDJSON_BUILD_DOC OFF) # Build rapidjson documentation
 set(RAPIDJSON_BUILD_EXAMPLES OFF) # Build rapidjson examples
 set(RAPIDJSON_BUILD_TESTS OFF) # Build rapidjson perftests and unittests
@@ -51,6 +51,12 @@ ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 add_executable(rest-cpp-data-science ${SRCS}) 
 target_link_libraries(rest-cpp-data-science pistache pthread dspack)
 
+# build as a library to facilitate testing
+include_directories(runner)
+file(GLOB runnerSRCS ${CMAKE_CURRENT_SOURCE_DIR}/runner/*.cpp)
+add_library(runner-library SHARED ${runnerSRCS})
+link_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 # build tests
 include_directories(external/googletest/googletest/include)
 include_directories(external/googletest/googlemock/include)
@@ -59,10 +65,8 @@ link_directories(external/googletest/build/lib)
 
 file(GLOB TESTSRCS ${CMAKE_CURRENT_SOURCE_DIR}/tests/test-impl/*.cpp)
 add_executable(test-impl ${TESTSRCS})
-target_link_libraries(test-impl gtest_main gtest gmock dspack)
+target_link_libraries(test-impl gtest_main gtest gmock dspack runner-library)
 
 # run tests
 enable_testing()
 add_test(run-test-impl test-impl)
-
-
