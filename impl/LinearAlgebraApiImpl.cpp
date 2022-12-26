@@ -27,9 +27,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = distanceInput.getV();
-        auto w = distanceInput.getW();
-        auto result = distance(v, w);
+        std::vector<double> v = distanceInput.getV();
+        std::vector<double> w = distanceInput.getW();
+        double result = distance(v, w);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -38,9 +38,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = dotInput.getV();
-        auto w = dotInput.getW();
-        auto result = dot(v, w);
+        std::vector<double> v = dotInput.getV();
+        std::vector<double> w = dotInput.getW();
+        double result = dot(v, w);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -50,9 +50,9 @@ namespace org::openapitools::server::api
         Get_column_output result_output;
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto col = getColumnInput.getCol();
-        auto mat = getColumnInput.getMat();
-        auto result = get_column(mat, int(col));
+        double col = getColumnInput.getCol();
+        std::vector<std::vector<double>> mat = getColumnInput.getMat();
+        std::vector<double> result = get_column(mat, int(col));
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -62,9 +62,9 @@ namespace org::openapitools::server::api
         Get_row_output result_output;
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto row = getRowInput.getRow();
-        auto mat = getRowInput.getMat();
-        auto result = get_row(mat, int(row));
+        double row = getRowInput.getRow();
+        std::vector<std::vector<double>> mat = getRowInput.getMat();
+        std::vector<double> result = get_row(mat, int(row));
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -73,8 +73,8 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = magnitudeInput.getV();
-        auto result = magnitude(v);
+        std::vector<double> v = magnitudeInput.getV();
+        double result = magnitude(v);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -83,9 +83,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto mat1 = matrixAddInput.getMat1();
-        auto mat2 = matrixAddInput.getMat2();
-        auto result = matrix_add(mat1, mat2);
+        std::vector<std::vector<double>> mat1 = matrixAddInput.getMat1();
+        std::vector<std::vector<double>> mat2 = matrixAddInput.getMat2();
+        std::vector<std::vector<double>> result = matrix_add(mat1, mat2);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -94,10 +94,10 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto c = scalarMultiplyInput.getC();
-        auto mat = scalarMultiplyInput.getMat();
-        auto v = get_column(mat, 0);
-        auto result = scalar_multiply(c, v);
+        double c = scalarMultiplyInput.getC();
+        std::vector<std::vector<double>> mat = scalarMultiplyInput.getMat();
+        std::vector<double> v = get_column(mat, 0);
+        std::vector<double> result = scalar_multiply(c, v);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -107,10 +107,10 @@ namespace org::openapitools::server::api
         Shape_output result_output;
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto mat = shapeInput.getMat();
-        auto result = shape(mat);
-        result_output.setNrows(result.first);
-        result_output.setNcols(result.second);
+        std::vector<std::vector<double>> mat = shapeInput.getMat();
+        auto [nrows, ncols] = shape(mat);
+        result_output.setNrows(nrows);
+        result_output.setNcols(ncols);
         nlohmann::to_json(json_to_dump, result_output);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -119,9 +119,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = squaredDistanceInput.getV();
-        auto w = squaredDistanceInput.getW();
-        auto result = squared_distance(v, w);
+        std::vector<double> v = squaredDistanceInput.getV();
+        std::vector<double> w = squaredDistanceInput.getW();
+        double result = squared_distance(v, w);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -130,8 +130,8 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto x = sumOfSquaresInput.getX();
-        auto result = sum_of_squares(x);
+        std::vector<double> x = sumOfSquaresInput.getX();
+        double result = sum_of_squares(x);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -140,9 +140,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = vectorAddInput.getV();
-        auto w = vectorAddInput.getW();
-        auto result = vector_add(v, w);
+        std::vector<double> v = vectorAddInput.getV();
+        std::vector<double> w = vectorAddInput.getW();
+        std::vector<double> result = vector_add(v, w);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -151,9 +151,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = vectorMeanInput.getV();
-        auto w = vectorMeanInput.getW();
-        auto result = vector_mean({v, w});
+        std::vector<double> v = vectorMeanInput.getV();
+        std::vector<double> w = vectorMeanInput.getW();
+        std::vector<double> result = vector_mean({v, w});
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -162,9 +162,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = vectorSubtractInput.getV();
-        auto w = vectorSubtractInput.getW();
-        auto result = vector_subtract(v, w);
+        std::vector<double> v = vectorSubtractInput.getV();
+        std::vector<double> w = vectorSubtractInput.getW();
+        std::vector<double> result = vector_subtract(v, w);
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);
@@ -173,9 +173,9 @@ namespace org::openapitools::server::api
     {
         nlohmann::json json_to_dump;
         std::string string_to_send;
-        auto v = vectorSumInput.getV();
-        auto w = vectorSumInput.getW();
-        auto result = vector_sum({v, w});
+        std::vector<double> v = vectorSumInput.getV();
+        std::vector<double> w = vectorSumInput.getW();
+        std::vector<double> result = vector_sum({v, w});
         nlohmann::to_json(json_to_dump, result);
         string_to_send = json_to_dump.dump();
         response.send(Pistache::Http::Code::Ok, string_to_send);

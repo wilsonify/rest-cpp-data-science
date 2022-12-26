@@ -12,3 +12,5 @@ properties:
   tn:
     type: number
     description: number of True Negatives
+example: 
+  $ref: "accuracy-input-example.json"
