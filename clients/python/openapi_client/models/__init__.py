@@ -1,0 +1,101 @@
+# coding: utf-8
+
+# flake8: noqa
+
+# import all models into this package
+# if you have many models here with many references from one model to another this may
+# raise a RecursionError
+# to avoid this, import only the models that you directly need like:
+# from openapi_client_py.model.pet import Pet
+# or import this package, but before doing it, use:
+# import sys
+# sys.setrecursionlimit(n)
+
+from openapi_client_py.model.accuracy_input import AccuracyInput
+from openapi_client_py.model.accuracy_output import AccuracyOutput
+from openapi_client_py.model.bucketize_input import BucketizeInput
+from openapi_client_py.model.bucketize_output import BucketizeOutput
+from openapi_client_py.model.correlation_input import CorrelationInput
+from openapi_client_py.model.correlation_matrix_input import CorrelationMatrixInput
+from openapi_client_py.model.correlation_matrix_output import CorrelationMatrixOutput
+from openapi_client_py.model.correlation_output import CorrelationOutput
+from openapi_client_py.model.covariance_input import CovarianceInput
+from openapi_client_py.model.covariance_output import CovarianceOutput
+from openapi_client_py.model.data_range_input import DataRangeInput
+from openapi_client_py.model.data_range_output import DataRangeOutput
+from openapi_client_py.model.de_mean_input import DeMeanInput
+from openapi_client_py.model.de_mean_output import DeMeanOutput
+from openapi_client_py.model.difference_quotient_input import DifferenceQuotientInput
+from openapi_client_py.model.difference_quotient_output import DifferenceQuotientOutput
+from openapi_client_py.model.distance_input import DistanceInput
+from openapi_client_py.model.distance_output import DistanceOutput
+from openapi_client_py.model.dot_input import DotInput
+from openapi_client_py.model.dot_output import DotOutput
+from openapi_client_py.model.echo_input import EchoInput
+from openapi_client_py.model.echo_output import EchoOutput
+from openapi_client_py.model.estimate_gradient_input import EstimateGradientInput
+from openapi_client_py.model.estimate_gradient_output import EstimateGradientOutput
+from openapi_client_py.model.f1_score_input import F1ScoreInput
+from openapi_client_py.model.f1_score_output import F1ScoreOutput
+from openapi_client_py.model.get_column_input import GetColumnInput
+from openapi_client_py.model.get_column_output import GetColumnOutput
+from openapi_client_py.model.get_row_input import GetRowInput
+from openapi_client_py.model.get_row_output import GetRowOutput
+from openapi_client_py.model.in_random_order_input import InRandomOrderInput
+from openapi_client_py.model.in_random_order_output import InRandomOrderOutput
+from openapi_client_py.model.interquartile_range_input import InterquartileRangeInput
+from openapi_client_py.model.interquartile_range_output import InterquartileRangeOutput
+from openapi_client_py.model.magnitude_input import MagnitudeInput
+from openapi_client_py.model.magnitude_output import MagnitudeOutput
+from openapi_client_py.model.matrix_add_input import MatrixAddInput
+from openapi_client_py.model.matrix_add_output import MatrixAddOutput
+from openapi_client_py.model.maximize_batch_input import MaximizeBatchInput
+from openapi_client_py.model.maximize_batch_output import MaximizeBatchOutput
+from openapi_client_py.model.maximize_stochastic_input import MaximizeStochasticInput
+from openapi_client_py.model.maximize_stochastic_output import MaximizeStochasticOutput
+from openapi_client_py.model.mean_input import MeanInput
+from openapi_client_py.model.mean_output import MeanOutput
+from openapi_client_py.model.median_input import MedianInput
+from openapi_client_py.model.median_output import MedianOutput
+from openapi_client_py.model.minimize_batch_input import MinimizeBatchInput
+from openapi_client_py.model.minimize_batch_output import MinimizeBatchOutput
+from openapi_client_py.model.minimize_stochastic_input import MinimizeStochasticInput
+from openapi_client_py.model.minimize_stochastic_output import MinimizeStochasticOutput
+from openapi_client_py.model.mode_input import ModeInput
+from openapi_client_py.model.mode_output import ModeOutput
+from openapi_client_py.model.partial_difference_quotient_input import PartialDifferenceQuotientInput
+from openapi_client_py.model.partial_difference_quotient_output import PartialDifferenceQuotientOutput
+from openapi_client_py.model.precision_input import PrecisionInput
+from openapi_client_py.model.precision_output import PrecisionOutput
+from openapi_client_py.model.quantile_input import QuantileInput
+from openapi_client_py.model.quantile_output import QuantileOutput
+from openapi_client_py.model.recall_input import RecallInput
+from openapi_client_py.model.recall_output import RecallOutput
+from openapi_client_py.model.scalar_multiply_input import ScalarMultiplyInput
+from openapi_client_py.model.scalar_multiply_output import ScalarMultiplyOutput
+from openapi_client_py.model.shape_input import ShapeInput
+from openapi_client_py.model.shape_output import ShapeOutput
+from openapi_client_py.model.split_data_input import SplitDataInput
+from openapi_client_py.model.split_data_output import SplitDataOutput
+from openapi_client_py.model.sqrt_input import SqrtInput
+from openapi_client_py.model.sqrt_output import SqrtOutput
+from openapi_client_py.model.squared_distance_input import SquaredDistanceInput
+from openapi_client_py.model.squared_distance_output import SquaredDistanceOutput
+from openapi_client_py.model.standard_deviation_input import StandardDeviationInput
+from openapi_client_py.model.standard_deviation_output import StandardDeviationOutput
+from openapi_client_py.model.strength_input import StrengthInput
+from openapi_client_py.model.strength_output import StrengthOutput
+from openapi_client_py.model.sum_of_squares_input import SumOfSquaresInput
+from openapi_client_py.model.sum_of_squares_output import SumOfSquaresOutput
+from openapi_client_py.model.train_test_split_input import TrainTestSplitInput
+from openapi_client_py.model.train_test_split_output import TrainTestSplitOutput
+from openapi_client_py.model.variance_input import VarianceInput
+from openapi_client_py.model.variance_output import VarianceOutput
+from openapi_client_py.model.vector_add_input import VectorAddInput
+from openapi_client_py.model.vector_add_output import VectorAddOutput
+from openapi_client_py.model.vector_mean_input import VectorMeanInput
+from openapi_client_py.model.vector_mean_output import VectorMeanOutput
+from openapi_client_py.model.vector_subtract_input import VectorSubtractInput
+from openapi_client_py.model.vector_subtract_output import VectorSubtractOutput
+from openapi_client_py.model.vector_sum_input import VectorSumInput
+from openapi_client_py.model.vector_sum_output import VectorSumOutput
