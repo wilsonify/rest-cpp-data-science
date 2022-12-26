@@ -1,16 +1,24 @@
 openapi: 3.0.1
 info:  
-  description: "This is a sample server"
+  description: "data science REST API endpoints, parameters, and responses, including information about preprocessing data, training models, making predictions, and evaluating models."
   license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html  
-  title: Minimal Pistache
+    name: MIT
+  title: rest-cpp-data-science
   version: 1.0.0
 servers:
   - url: "localhost"
 tags:
   - name: math
     description: apply mathematics to data
+  - name: echo
+    description: echo
+  - name: linear_algebra
+    description: operation on vectors and matricies
+  - name: machine_learning
+    description: evaluating machine learned models
+  - name: stats
+    description: measurements of central tendency and dispersion
+
 paths:
   /sqrt:
     $ref: "paths/sqrt/sqrt.yaml"
