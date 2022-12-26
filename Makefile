@@ -15,6 +15,27 @@ generate:
 	-g cpp-pistache-server \
 	-o /local/generated
 
+all-clients: generate-cpp-restsdk generate-python-nextgen
+
+generate-cpp-restsdk:
+	docker run --rm \
+	-u $(shell id -u):$(shell id -g) \
+	-v "$(shell pwd):/local" \
+	openapitools/openapi-generator-cli:latest generate \
+	-i /local/openapi/openapi.yaml \
+	-g  cpp-restsdk \
+	-o /local/clients/cpp-restsdk
+
+generate-python-nextgen:
+	docker run --rm \
+	-u $(shell id -u):$(shell id -g) \
+	-v "$(shell pwd):/local" \
+	openapitools/openapi-generator-cli:latest generate \
+	-i /local/openapi/openapi.yaml \
+	-g python-nextgen \
+	-o /local/tests/python-nextgen
+
+
 build/VERSION.txt:
 	mkdir -p build && $(call ver_file, $@)
 
