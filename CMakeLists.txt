@@ -50,3 +50,19 @@ ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 
 add_executable(rest-cpp-data-science ${SRCS}) 
 target_link_libraries(rest-cpp-data-science pistache pthread dspack)
+
+# build tests
+include_directories(external/googletest/googletest/include)
+include_directories(external/googletest/googlemock/include)
+add_subdirectory(external/googletest)
+link_directories(external/googletest/build/lib)
+
+file(GLOB TESTSRCS ${CMAKE_CURRENT_SOURCE_DIR}/tests/test-impl/*.cpp)
+add_executable(test-impl ${TESTSRCS})
+target_link_libraries(test-impl gtest_main gtest gmock dspack)
+
+# run tests
+enable_testing()
+add_test(run-test-impl test-impl)
+
+
