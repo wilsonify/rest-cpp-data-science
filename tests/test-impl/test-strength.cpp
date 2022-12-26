@@ -1,13 +1,21 @@
 #include <gtest/gtest.h>
 #include "gmock/gmock-matchers.h"
 #include "dspack.h"
+#include "nlohmann/json.hpp"
+#include "run-strength.h"
 
 TEST(test_strength, test_strength01)
 {
-    double result;
-    result = strength(25.0, 50.0);
-    result = round(result, 1);
-    EXPECT_EQ(0.5, result);
+    nlohmann::json input_json;
+    nlohmann::json result_json;
+    std::string expected_str;
+    nlohmann::json expected_json;
+    expected_str = R"({"actual":25,"expected":50,"result":0.5})";
+    expected_json = nlohmann::json::parse(expected_str);
+    input_json["expected"] = 50.0;
+    input_json["actual"] = 25.0;
+    result_json = run_strength(input_json);
+    EXPECT_EQ(result_json, expected_json);
 }
 
 TEST(test_strength, test_strength02)
