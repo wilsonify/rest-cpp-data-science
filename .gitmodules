@@ -13,3 +13,6 @@
 [submodule "external/base-cpp-data-science"]
 	path = external/base-cpp-data-science
 	url = https://github.com/wilsonify/base-cpp-data-science.git
+[submodule "clients/cpp-restsdk/external/cpprestsdk"]
+	path = clients/cpp-restsdk/external/cpprestsdk
+	url = https://github.com/microsoft/cpprestsdk.git
