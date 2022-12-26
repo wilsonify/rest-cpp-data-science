@@ -33,7 +33,7 @@ void MachineLearningApi::init() {
 void MachineLearningApi::setupRoutes() {
     using namespace Pistache::Rest;
 
-    Routes::Post(*router, base + "/acc`racy", Routes::bind(&MachineLearningApi::accuracy_handler, this));
+    Routes::Post(*router, base + "/accuracy", Routes::bind(&MachineLearningApi::accuracy_handler, this));
     Routes::Post(*router, base + "/f1_score", Routes::bind(&MachineLearningApi::f1_score_handler, this));
     Routes::Post(*router, base + "/precision", Routes::bind(&MachineLearningApi::precision_handler, this));
     Routes::Post(*router, base + "/split_data", Routes::bind(&MachineLearningApi::split_data_handler, this));
