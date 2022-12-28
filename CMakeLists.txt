@@ -53,6 +53,7 @@ target_link_libraries(rest-cpp-data-science pistache pthread dspack)
 
 # build as a library to facilitate testing
 include_directories(runner)
+include_directories(include)
 file(GLOB runnerSRCS ${CMAKE_CURRENT_SOURCE_DIR}/runner/*.cpp)
 add_library(runner-library SHARED ${runnerSRCS})
 link_directories(${CMAKE_CURRENT_BINARY_DIR})
